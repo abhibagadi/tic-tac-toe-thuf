@@ -77,6 +77,7 @@ public class GameboardView extends SurfaceView implements Runnable {
 	public void resume() {
 		isVisible = true;
 		thread = new Thread(this);
+		thread.setName("GameboardView Thread");
 		thread.start();
 	}
 

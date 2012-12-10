@@ -30,12 +30,6 @@ public class GameActivity extends Activity implements Runnable {
 	protected void onPause() {
 		super.onPause();
 		gameboard.pause();
-		try {
-			thread.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		thread = null;
 	}
 
 	@Override
